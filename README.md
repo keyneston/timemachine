@@ -1,5 +1,7 @@
 # TimeMachine
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/keyneston/timemachine.svg)](https://pkg.go.dev/github.com/keyneston/timemachine)
+
 A library for mocking time in go. Using the builder pattern a tiny virtual
 machine is programmed to take the desired steps for mocking.
 
