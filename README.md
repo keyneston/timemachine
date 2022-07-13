@@ -1,7 +1,7 @@
 # TimeMachine
 
-A library for mocking time in go. Using the builder pattern we program a tiny
-virtual machine to take the steps we want it to take.
+A library for mocking time in go. Using the builder pattern a tiny virtual
+machine is programmed to take the desired steps for mocking.
 
 ## Adding to your structs
 
@@ -15,15 +15,15 @@ func (m MyStruct) Time() time.Time {
 }
 
 func New() MyStruct {
-  return MyStruct{
-      time: time.Now, // Easily configure to use `time.Now` in production.
-  }
+	return MyStruct{
+		time: time.Now, // Easily configure to use `time.Now` in production.
+	}
 
 }
 
 func TestMyStruct(t *testing.T) {
 	m := MyStruct{
-    // And configure to use the mock during testing.
+		// And configure to use the mock during testing.
 		time: timemachine.New().Set(myDefaultStartTime).Get().Repeat(),
 	}
 
